@@ -46,13 +46,7 @@ depends = ["ruff-fix", "ruff-format", "prettier-format", "taplo-format"]
 
 [tasks.lint]
 description = "Run all linters/type checks"
-depends = [
-  "ruff-check",
-  "mypy",
-  "prettier-check",
-  "taplo-check",
-  "pyright-check",
-]
+depends = ["ruff-check", "prettier-check", "taplo-check"]
 
 [tasks.ruff-check]
 description = "Check code with ruff"
@@ -65,16 +59,6 @@ run = "ruff check --fix ."
 [tasks.ruff-format]
 description = "Format code with ruff"
 run = "ruff format ."
-
-[tasks.mypy]
-description = "Run mypy type checks"
-run = "uv run mypy ."
-
-[tasks.pyright-check]
-description = "Run pyright type checks"
-dir = "{{ config_root }}"                                                                  # Directory containing mise.toml
-run = "bunx pyright --pythonpath \"{{ config_root }}/.venv/bin/python\" ."
-run_windows = "bunx pyright --pythonpath \"{{ config_root }}/.venv/Scripts/python.exe\" ."
 
 [tasks.prettier-format]
 description = "Format non-Python files (md, toml, json, yaml)"

@@ -63,6 +63,22 @@ That keeps the package usable as a library without forcing CLI usage.
 - Metabolic acid/base modeling for amino acids is not implemented yet.
 - The compound registry currently includes common citrate, malate, bicarbonate, carbonate, acetate, and lactate salts.
 
+## Install from GitHub with uvx
+
+Run directly from the repo without a local install:
+
+```bash
+uvx --from git+https://github.com/tgbender/alkacli alkacli calc "potassium citrate monohydrate" --amount 1g
+uvx --from git+https://github.com/tgbender/alkacli alkacli solve "sodium citrate dihydrate" --target 50mEq
+```
+
+Or install it as a user tool:
+
+```bash
+uv tool install git+https://github.com/tgbender/alkacli
+alkacli calc "magnesium malate" --amount 1g
+```
+
 ## Development
 
 ```bash
