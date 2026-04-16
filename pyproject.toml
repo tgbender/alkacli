@@ -1,0 +1,18 @@
+[build-system]
+requires = ["uv_build>=0.8.14"]
+build-backend = "uv_build"
+
+[project]
+name = "alkacli"
+version = "0.1.0"
+description = "CLI for calculating alkali equivalents, elemental mass, and solver-based dosing"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = ["typer>=0.12", "chempy>=0.10"]
+
+[project.scripts]
+alkacli = "alkacli.cli:main"
+
+[tool.uv]
+package = true
+exclude-newer = "3 days"
