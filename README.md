@@ -18,6 +18,9 @@ alkacli calc "magnesium malate" --amount 1g
 alkacli solve "sodium citrate dihydrate" --target 50mEq
 ```
 
+Use `--headless` for plain text output and `--json` to force JSON on any command.
+These flags are global, so put them before the subcommand, and the top-level help is plain text now.
+
 ## Python API
 
 The public interface is intentionally simple:
