@@ -7,7 +7,7 @@ name = "alkacli"
 version = "0.1.0"
 description = "CLI for calculating alkali equivalents, elemental mass, and solver-based dosing"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = ["typer>=0.12", "chempy>=0.10"]
 
 [project.scripts]

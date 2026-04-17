@@ -85,7 +85,7 @@ alkacli calc "magnesium malate" --amount 1g
 ## Development
 
 ```bash
-uv venv --python 3.14
+uv venv --python 3.12
 uv pip install --python .venv/Scripts/python.exe -e .
 uv run alkacli calc "potassium citrate monohydrate" --amount 1g
 uv build
